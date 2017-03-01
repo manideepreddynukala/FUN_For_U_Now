@@ -1,0 +1,75 @@
+<html>
+<head>
+<script type="text/javascript">
+
+var slideimages = new Array() // create new array to preload images
+slideimages[0] = new Image() // create new instance of image object
+slideimages[0].src = "logo.jpg" // set image object src property to an image's src, preloading that image in the process
+slideimages[1] = new Image()
+slideimages[1].src = "what.png"
+slideimages[2] = new Image()
+slideimages[2].src = "is.png"
+slideimages[3] = new Image()
+slideimages[3].src = "honey.jpg"
+slideimages[4] = new Image()
+slideimages[4].src = "pawan.jpg"
+slideimages[5] = new Image()
+slideimages[5].src = "ronal.jpg"
+slideimages[6] = new Image()
+slideimages[6].src = "lebron.jpeg"
+slideimages[7] = new Image()
+slideimages[7].src = "royal.jpg"
+slideimages[8] = new Image()
+slideimages[8].src = "got.jpg"
+
+slideimages[9] = new Image()
+slideimages[9].src = "game.jpg"
+slideimages[10] = new Image()
+slideimages[10].src = "ris.png"
+slideimages[11] = new Image()
+slideimages[11].src = "logo.jpg"
+
+
+
+
+</script>
+</head>
+<body>
+<a href="manideep2.html" >
+<img src="logo.jpg" id="slide" width="1350" height="650" />
+
+
+
+</a>
+
+
+<script type="text/javascript">
+
+//variable that will increment through the images
+var step=0
+
+function slideit(){
+ //if browser does not support the image object, exit.
+ if (!document.images)
+  return
+ document.getElementById('slide').src = slideimages[step].src
+ if (step<10)
+  step++
+ else
+  step=11
+ //call function "slideit()" every 3.3 seconds
+ setTimeout("slideit()",3300)
+}
+
+slideit()
+
+</script>
+<embed src="amplifier.mp3" autostart="true" loop="true"
+width="2" height="0">
+</embed>
+
+
+
+
+</body>
+</html>
